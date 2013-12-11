@@ -1,0 +1,25 @@
+if (Meteor.isClient) {
+  Template.menu.events = {
+    'submit form': function(e, template){
+      e.preventDefault();
+      form={};
+      $.each($('#user-control').serializeArray(), function() {
+	form[this.name] = this.value;
+	var userMail = form.email,
+	    userPassword = form.password;
+	if(form[this.name]===''){
+	  console.log('error');
+          
+	} else {
+
+	  console.log('data olustu giris yaptır'); 
+          window.location.href = "/admin-menu";
+	}
+      });
+    }
+  };
+  Template.menu.profile = function () {
+    return zacdUsers.find({email:'ckayaismet@msn.com'});
+  };
+  
+}

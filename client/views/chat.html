@@ -1,0 +1,29 @@
+<template name="chat">
+  {{> messages}}
+  <div class="entry-box">
+    <input type="text" class="topcoat-text-input" id="name" placeholder="mail adresiniz" value="">
+
+    <!-- <input type="text" id="messageBox" class="form-control" placeholder="mesaj yazınız"> -->
+    <textarea class="topcoat-textarea--large" id="messageBox" rows="3"  placeholder="Mesajınız"></textarea>
+  </div>
+
+{{> chatBtn}}
+</template>
+
+<template name="messages">
+  <div class="messages-box scroll">
+    {{#each messages}}
+    {{> message}}<br />
+    {{/each}}
+  </div>
+</template>
+
+<template name="chatBtn">
+<button class="topcoat-button--cta delete" >Chat'i Temizle</button> 
+
+</template>
+
+<template name="message">
+  <i class="glyphicon glyphicon-user" id="chat-user-icon"> </i> 
+  <strong id="name-strong">{{name}} : </strong> {{message}}
+</template>

@@ -1,0 +1,35 @@
+<template name="chat">
+  {{> messages}}
+  <div class="entry-box">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input type="text" id="name" class="form-control" placeholder="isim giriniz">
+      <span class="input-group-addon" >{{> chatBtn}}</span>
+    </div>
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">
+	<i class="glyphicon glyphicon-comment"></i>
+      </span>
+      <input type="text" id="messageBox" class="form-control" placeholder="mesaj yazınız">
+    </div>
+  </div>
+</template>
+
+<template name="messages">
+  <div class="messages-box scroll">
+    {{#each messages}}
+    {{> message}}<br />
+    {{/each}}
+  </div>
+</template>
+
+<template name="chatBtn">
+  <button type="button" class="delete" >
+    <i class="glyphicon glyphicon-floppy-remove" ></i>
+  </button>
+</template>
+
+<template name="message">
+  <i class="glyphicon glyphicon-user" id="chat-user-icon"></i><strong id="name-strong">{{name}}: </strong>{{message}}
+</template>

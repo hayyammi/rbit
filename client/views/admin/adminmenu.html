@@ -1,0 +1,49 @@
+<template name="adminMenu">
+<ul class="topcoat-list__container">
+  <li class="topcoat-list__item"> 
+      Merhaba <a href="/profile">{{useremail}}</a>
+      
+    </li>
+    <li class="topcoat-list__item"> 
+      <a href="/new-user">
+	Yeni Kullanıcı 
+      </a>
+    </li>
+    <li class="topcoat-list__item">
+      <a href="/mainmenu-item-add">
+   	Ana menu öğeleri
+      </a>
+    </li>
+    <li class="topcoat-list__item">
+      <a href="/submenu-item-add">
+    	Alt menu öğeleri
+      </a>
+    </li>
+    <li class="topcoat-list__item">
+      <a href="/menu">
+    	Kasa 
+      </a>
+    </li>
+    <li class="topcoat-list__item">
+      <a href="/menu">
+	Masalar 
+      </a>
+    </li>
+  </ul>
+</template>
+<template name="profile">
+  <ul class="topcoat-list__container">
+    {{#each profileData}}
+    <li class="topcoat-list__item">  
+      {{company}} - {{name}} / {{email}} 
+    </li>
+  </ul>
+<form name="profile-update" id="profile-update">
+ <input type="hidden" class="topcoat-text-input" id="id" value="{{_id}}">
+  <input type="text" class="topcoat-text-input" id="email" placeholder="mail adresiniz" value="{{email}}">
+  <input type="password" class="topcoat-text-input" id="password" placeholder="parola" value="{{password}}">
+  {{/each}}
+  <input type="submit" class="topcoat-button--cta send"  value="Güncelle">
+ 
+</form>
+</template>

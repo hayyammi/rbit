@@ -1,0 +1,28 @@
+<template name="menu">
+  <ul class="list-group">
+    <a href="/menu">
+      <li class="list-group-item">
+	<span class="badge"><i class="glyphicon glyphicon-glass"></i></span>
+	Alkollü İçecekler
+      </li>
+    </a>
+    <a href="/menu">
+      <li class="list-group-item">
+	<span class="badge"><i class="glyphicon glyphicon-tint fire"></i></span>
+	Sıcak  İçecekler
+      </li>
+    </a>
+    <a href="/menu">
+      <li class="list-group-item">
+	<span class="badge"><i class="glyphicon glyphicon-tint"></i></span>
+	Soğuk Alkolsüz  İçecekler
+      </li>
+    </a>
+    <a href="/menu">
+      <li class="list-group-item">
+	<span class="badge"><i class="glyphicon glyphicon-fire"></i></span>
+	Tamam! Sen söyle ne içeyim ?
+      </li>
+    </a>
+  </ul>
+</template>

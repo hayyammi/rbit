@@ -1,0 +1,16 @@
+if (Meteor.isServer) {
+  Messages = new Meteor.Collection ('messages');
+  Meteor.startup(function () {
+    
+  });
+  Meteor.methods({
+    messagesInsert :function (name,text,ts){
+      Messages.insert({name: name, message: text, time: ts});
+    },    
+    removeAllMessages: function(){
+      Messages.remove({});
+    },
+
+
+  });
+}

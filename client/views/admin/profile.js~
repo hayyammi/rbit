@@ -1,0 +1,4 @@
+  Template.profile.useremail=function (e){
+    var userEmail =Session.get('useremail');
+    return userEmail;
+  };

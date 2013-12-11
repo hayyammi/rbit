@@ -1,0 +1,103 @@
+<head>
+  <title>rbit-advm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  {{>content}}
+</body>
+
+<template name="content">
+  <div class="container-fluid">
+    <div class="col-lg-1 col-sm-2 col-xs-3" id="spotbar">
+      {{>mainmenu}}
+    </div>
+    <div class="col-lg-11 col-sm-10 col-xs-9 pull-right page-field" >
+      {{#isolate}} {{renderPage}} {{/isolate}}
+    </div> 
+  </div>
+</template>
+<template name="mainmenu">
+   <a href="/menu" class="thumbnail">
+    <img src="{{logo}}" />
+  </a> 
+<a href="/menu" class="thumbnail">
+    <i class="glyphicon glyphicon-cutlery" title="Menu"></i>
+  </a>
+  <a href="/garson"  class="thumbnail" title="garson">
+    <i class="glyphicon glyphicon-bell" title="Gaarrrsoon" ></i>
+  </a>
+ 
+  <a href="/menu" class="thumbnail">
+    <i class="glyphicon glyphicon-bullhorn " title="Siparişime noldu?"></i>
+  </a> 
+  <a href="/question" class="thumbnail">
+    <i class="glyphicon glyphicon-comment" title="Konuşma başlat"></i>
+  </a>
+  <a href="/music" class="thumbnail mennu-item">
+    <i class="glyphicon glyphicon-music " title="Başka bir şey dinlesem olurmu?"></i>
+  </a>
+  <a href="/music" class="thumbnail">
+    <i class="glyphicon glyphicon-map-marker" title="Havam olsun! Buradayım"></i>
+  </a>
+  <a href="/chat" class="thumbnail">
+    <i class="glyphicon glyphicon-comment" title="Konuşalım mı!"></i>
+  </a>
+  <a href="/admin-login"  class="thumbnail">
+    <i class="glyphicon glyphicon-tower"></i>
+  </a>
+  <a href="/table-account{{tablesNo}}" class="thumbnail" title="Masa Seç">
+    <img src="{{tableicon}}" style="width:20px"/>
+  </a> 
+   <badge class="thumbnail">{{tablesNo}}</badge>
+</template>
+
+<template name="tablesList">
+<ul class="nav nav-pills">
+  <li class="" id="list-item">
+    <a href="/tablesA1" class="thumbnail" title="Masa Seç">
+      A<span class="badge">1</span>
+    </a>
+  </li>
+  <li class="">
+    <a href="/tablesA2" class="thumbnail" title="Masa Seç">
+      A<span class="badge">2</span>
+    </a>
+  </li>  
+<li class="">
+    <a href="/tablesA3" class="thumbnail" title="Masa Seç">
+      A<span class="badge">3</span>
+    </a>
+  </li>
+  <li class="">
+    <a href="/tablesA4" class="thumbnail" title="Masa Seç">
+      A<span class="badge">4</span>
+    </a>
+  </li>  <li class="">
+    <a href="/tablesA5" class="thumbnail" title="Masa Seç">
+      A<span class="badge">5</span>
+    </a>
+  </li>
+  <li class="">
+    <a href="/tablesA6" class="thumbnail" title="Masa Seç">
+      A<span class="badge">6</span>
+    </a>
+  </li>  
+<li class="">
+    <a href="/tablesA7" class="thumbnail" title="Masa Seç">
+      A<span class="badge">7</span>
+    </a>
+  </li>
+  <li class="">
+    <a href="/tablesA112" class="thumbnail" title="Masa Seç">
+      A<span class="badge">112</span>
+    </a>
+  </li>
+</ul>
+</template>
+
+<template name="tableAccount">
+<badge class="thumbnail">{{tablesNo}}</badge>
+</template>
+
+

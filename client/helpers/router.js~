@@ -1,0 +1,10 @@
+Meteor.Router.add({
+  '/tables:_id': 'mainmenu',
+  '/menu': 'menu',
+  '/chat': 'chat',
+  '/':'mainmenu',
+  '/*' : function(e) {
+      return 'Aradığız sayfaya ulaşılamadı!!';
+    }
+});
+

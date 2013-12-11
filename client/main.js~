@@ -1,0 +1,60 @@
+if (Meteor.isClient) {
+
+  Template.footermenu.events={
+    'click #tables-send': function(e) {
+      e.preventDefault();
+      
+      var thisValue = document.getElementById("tablesNo").value.trim();
+       if (confirm('masa no: ' + thisValue +' ?')) {
+         Session.set('tablesNm',thisValue);
+       }      
+    }
+  };
+  Template.footermenu.tablesNo=function (){
+    var newTablesVal=Session.get('tablesNm');
+    
+    if(!newTablesVal){
+      console.log(newTablesVal,'if');
+      alert('Lütfen Masa Seçiniz');
+     
+    }else{
+     // console.log(newTablesVal,'else'); ok
+     return newTablesVal;
+    }
+    
+  };
+
+  Template.header.logo = function () {
+    var logoImg = 'n.png';
+    return logoImg;
+  };
+
+  
+  
+  // Validation = {
+  //   clear: function () { 
+  //     return Session.set("error", undefined); 
+  //   },
+  //   set_error: function (message) {
+  //     return Session.set("error", message);
+  //   },
+  //   valid_name: function (name) {
+  //     this.clear();
+  //     if (name.length >= 2) {
+  //       this.set_error("Name can't be blank");
+  //       return false;
+  //     } // else if (this.name_exists(name)) {
+  //     //   this.set_error("Aynı İsimli Kullanıcı Var");
+  //     //   return false;
+  //     // }
+  //     else {
+  //       return true;
+  //     }
+  //   },
+  //   name_exists: function(name) {
+  //     return Messages.findOne({name: name});
+  //   }
+  // };
+}
+
+

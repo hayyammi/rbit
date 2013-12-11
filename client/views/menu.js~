@@ -1,0 +1,6 @@
+
+Template.content.logo = function () {
+  var logoImg = 'url("n.png")';
+  return logoImg;
+};
+

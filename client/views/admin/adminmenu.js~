@@ -1,0 +1,4 @@
+  Template.adminMenu.name=function (e){
+    var n="naber";
+    return n;
+  };

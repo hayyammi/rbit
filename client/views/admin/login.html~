@@ -1,0 +1,7 @@
+<template name="adminLogin">
+<form>
+<input type="text" class="topcoat-text-input" id="email" placeholder="mail adresiniz" value="">
+<input type="password" class="topcoat-text-input" id="password" placeholder="parola" value="">
+<button class="topcoat-button--cta delete" >Giriş</button> 
+</form>
+</template>

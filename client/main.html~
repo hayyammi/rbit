@@ -1,0 +1,95 @@
+<head>
+  <title>rbit-advm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  {{> header}}
+ {{> content}}
+
+</body>
+<template name="content">
+  <div class="container-fluid"> <!---style="background-image:{{logo}};"-->
+   {{#isolate}} {{renderPage}}{{/isolate}}
+    {{> footermenu}}
+  </div>  
+</template>
+
+<template name="mainmenu">
+     <ul class="list-group">
+      <a href="/garson">
+	<li class="list-group-item" >
+          <span class="badge"><i class="glyphicon glyphicon-bell" title="Gaarrrsoon" ></i> </span>
+	  Garrsoon
+	</li> 
+      </a>
+      <a href="/menu">
+	<li class="list-group-item">
+	  <span class="badge"> <i class="glyphicon glyphicon-cutlery" title="Menu"></i></span>
+	  Menu 
+      </li></a>
+      <a href="/menu">
+	<li class="list-group-item">
+	  <span class="badge"><i class="glyphicon glyphicon-bullhorn" title="Siparişime noldu?"></i></span>
+	  Acıkttıım
+	</li>
+      </a>
+      <a href="/question">
+	<li class="list-group-item">
+	  <span class="badge"><i class="glyphicon glyphicon-comment" title="Konuşma başlat"></i></span>
+	  Soru sor
+      </li></a>
+      <a href="/music">
+	<li class="list-group-item">
+	  <span class="badge"><i class="glyphicon glyphicon-music" title="Başka bir şey dinlesem olurmu?"></i></span>
+	  İstek Şarkı
+	</li>
+      </a>
+      <a href="/music">
+	<li class="list-group-item">
+	  <span class="badge"> <i class="glyphicon glyphicon-map-marker" title="Havam olsun! Buradayım"></i></span>
+	  Konumum
+	</li>
+      </a>
+      <a href="/chat">
+	<li class="list-group-item">
+	  <span class="badge"> <i class="glyphicon glyphicon-map-marker" title="Havam olsun! Buradayım"></i></span>
+	  noxus geyik
+	</li>
+      </a>   
+    </ul>
+</template>
+
+<template name="header"> 
+  <div class="panel panel-primary header-panel">
+      <div class="logo-x pull-left"><a href="/">
+	  <img src="{{logo}}" style="width:30px"/></a>
+      </div>
+      <strong class="name-title">noxus bar </strong>
+  </div>
+</template>
+
+<template name="footermenu"> 
+  <div class="panel panel-primary footer-panel ">
+    <div class="col-lg-9 col-sm-9 col-xs-9">
+      <a href="/" class="input-group-addon"><i class="glyphicon glyphicon-home"></i></a> 
+      {{#if superUsers}}
+      <a href="/kasa" class="input-group-addon"><i class="glyphicon glyphicon-tower"></i></a>
+      {{else}}
+      {{#if garsonUsers}}
+      <a href="/tables" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></a>
+      {{/if}}
+      {{/if}}
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-2 ">
+      <div class="input-group ">
+	<input type="text" id="tablesNo" class="form-control" name="tablesNo"  value="{{tablesNo}}">
+	<span class="input-group-btn">
+          <button class="btn btn-default" id="tables-send" type="button">
+	    <i class="glyphicon glyphicon-save"></i>
+	  </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</template>
